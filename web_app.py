@@ -100,5 +100,11 @@ def index():
         return f"Operation failed: {error}", 400
 
 
+@app.route("/<path:requested_path>", methods=["GET", "POST"])
+def forwarded_path(requested_path):
+    """Handle paths that a serverless platform forwards to the Flask function."""
+    return index()
+
+
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=False)
