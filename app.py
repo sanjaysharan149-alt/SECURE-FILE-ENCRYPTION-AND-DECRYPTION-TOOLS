@@ -7,6 +7,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
 import crypto_tool
+from web_app import app
 
 
 class SecureFileVaultApp:
