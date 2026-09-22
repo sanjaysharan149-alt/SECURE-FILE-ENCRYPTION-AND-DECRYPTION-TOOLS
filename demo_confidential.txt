@@ -1,0 +1,6 @@
+CONFIDENTIAL DEMO DOCUMENT
+
+Project: Secure File Vault
+Purpose: Demonstrate AES-256-GCM encryption and tamper detection.
+
+This sample text should be unchanged after decryption.
