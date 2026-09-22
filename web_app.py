@@ -3,7 +3,6 @@
 
 import os
 import tempfile
-from pathlib import Path
 
 from flask import Flask, request, send_file
 from werkzeug.utils import secure_filename

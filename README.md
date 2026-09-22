@@ -5,7 +5,7 @@
 This project is a small desktop demonstration of password-based file encryption.
 It uses AES-256-GCM for confidentiality and tamper detection, with PBKDF2-HMAC-SHA256 for password-based key derivation.
 
-## Setup on Windows
+## Run locally
 
 Install Python 3.11 or newer from [python.org](https://www.python.org/downloads/windows/). During installation, enable **Add python.exe to PATH**.
 
@@ -16,6 +16,19 @@ cd "C:\Users\fearl\Downloads\New folder\.py"
 py -m pip install cryptography
 py app.py
 ```
+
+For the browser interface, run:
+
+```bat
+py -m pip install -r requirements.txt
+py web_app.py
+```
+
+Then open `http://127.0.0.1:5000`.
+
+## Deploy to Vercel
+
+This repository includes `api/index.py` and `vercel.json` for Vercel's Python serverless runtime. Import the GitHub repository into Vercel, leave the framework preset as **Other**, and deploy from the repository root. The browser interface will be available at the deployed Vercel URL.
 
 ## Demonstration
 
