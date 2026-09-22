@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
 """Desktop demo for the AES file encryption tool."""
 
+from __future__ import annotations
+
 import os
 import threading
-import tkinter as tk
-from tkinter import filedialog, messagebox, ttk
+
+try:
+    import tkinter as tk
+    from tkinter import filedialog, messagebox, ttk
+except ModuleNotFoundError:
+    tk = None
+    filedialog = messagebox = ttk = None
 
 import crypto_tool
 from web_app import app
@@ -161,6 +168,8 @@ class SecureFileVaultApp:
 
 
 def main() -> None:
+    if tk is None:
+        raise RuntimeError("The desktop interface requires a Python installation with tkinter.")
     root = tk.Tk()
     SecureFileVaultApp(root)
     root.mainloop()
